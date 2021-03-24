@@ -126,7 +126,7 @@ production stylesheet in assets/built/screen.css
     padding: 0;
 }
 
-.site-description span {
+.site-description a {
 
     font-weight: bold;
     transition: 500ms linear;
@@ -137,17 +137,17 @@ production stylesheet in assets/built/screen.css
     font-size: 105%;
 } */
 
-.site-description span.eco-environment:hover {
+.site-description a.eco-environment:hover {
 
     color: #118611;
 }
 
-.site-description span.eco-mental-health:hover {
+.site-description a.eco-mental-health:hover {
 
     color: #e231d3;
 }
 
-.site-description span.eco-heart:hover {
+.site-description a.eco-heart:hover {
 
     color: #d12828;
 }
@@ -208,8 +208,8 @@ production stylesheet in assets/built/screen.css
     /* background: var(--ghost-accent-color); */
 }
 
-.gh-head a {
-    color: inherit;
+.gh-head a{
+    /* color: inherit; */
     text-decoration: none;
 }
 
