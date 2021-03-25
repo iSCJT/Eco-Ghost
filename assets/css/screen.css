@@ -31,12 +31,11 @@ production stylesheet in assets/built/screen.css
 @import "global.css";
 
 :root {
-
     /* Colours */
     --color-green: #a4d037;
     --color-yellow: #fecd35;
     --color-red: #f05230;
-    --color-darkgrey: #15171A;
+    --color-darkgrey: #15171a;
     --color-midgrey: #738a94;
     --color-lightgrey: #c5d2d9;
     --color-wash: #e5eff5;
@@ -52,12 +51,11 @@ production stylesheet in assets/built/screen.css
      */
 
     /* Fonts */
-    --font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    --font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+        "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     --font-serif: Georgia, Times, serif;
     --font-mono: Menlo, Courier, monospace;
-
 }
-
 
 /* 2. Layout - Page building blocks
 /* ---------------------------------------------------------- */
@@ -66,9 +64,13 @@ production stylesheet in assets/built/screen.css
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: #c7f0e7;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #c7f0e7, #b1e9d2);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #c7f0e7, #b1e9d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #c7f0e7; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #c7f0e7, #b1e9d2); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #c7f0e7,
+        #b1e9d2
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -85,7 +87,6 @@ production stylesheet in assets/built/screen.css
     max-width: 1200px;
     width: 100%;
 }
-
 
 /* 4. Site Header
 /* ---------------------------------------------------------- */
@@ -127,30 +128,14 @@ production stylesheet in assets/built/screen.css
 }
 
 .site-description a {
-
     font-weight: bold;
     transition: 500ms linear;
-
+    
 }
 
 /* .site-description span:hover {
     font-size: 105%;
 } */
-
-.site-description a.eco-environment:hover {
-
-    color: #118611;
-}
-
-.site-description a.eco-mental-health:hover {
-
-    color: #e231d3;
-}
-
-.site-description a.eco-heart:hover {
-
-    color: #d12828;
-}
 
 .site-logo {
     max-height: 55px;
@@ -168,6 +153,33 @@ production stylesheet in assets/built/screen.css
     .site-header-content p {
         max-width: 80vmin;
         font-size: 1.8rem;
+    }
+}
+@media (max-width: 1000px) {
+    .site-description a.eco-environment {
+        color: #118611;
+    }
+
+    .site-description a.eco-mental-health {
+        color: #e231d3;
+    }
+
+    .site-description a.eco-heart {
+        color: #d12828;
+    }
+}
+
+@media (min-width: 1001px) {
+    .site-description a.eco-environment:hover {
+        color: #118611;
+    }
+
+    .site-description a.eco-mental-health:hover {
+        color: #e231d3;
+    }
+
+    .site-description a.eco-heart:hover {
+        color: #d12828;
     }
 }
 
@@ -188,8 +200,6 @@ production stylesheet in assets/built/screen.css
     /* background: var(--ghost-accent-color); */
 }
 
-
-
 /* 5. Site Navigation
 /* ---------------------------------------------------------- */
 
@@ -199,16 +209,20 @@ production stylesheet in assets/built/screen.css
     line-height: 1.3em;
     z-index: 10;
     box-shadow: 0px 2px 5px #2e362e;
-    position: fixed;
-    width:100%;
-    background: #c7f0e7;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #c7f0e7, #b1e9d2);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #c7f0e7, #b1e9d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* position: fixed; */
+    width: 100%;
+    background: #c7f0e7; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #c7f0e7, #b1e9d2); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #c7f0e7,
+        #b1e9d2
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     /* color: #fff; */
     /* background: var(--ghost-accent-color); */
 }
 
-.gh-head a{
+.gh-head a {
     /* color: inherit; */
     text-decoration: none;
 }
@@ -222,12 +236,10 @@ production stylesheet in assets/built/screen.css
 
 @media (min-width: 1001px) {
     .gh-head {
-        box-shadow:none;
+        box-shadow: none;
         /* position:relative; */
     }
 }
-
-
 
 /* Brand
 /* ---------------------------------------------------------- */
@@ -253,7 +265,6 @@ production stylesheet in assets/built/screen.css
 .gh-head-logo img {
     max-height: 26px;
 }
-
 
 /* Primary Navigation
 /* ---------------------------------------------------------- */
@@ -281,13 +292,12 @@ production stylesheet in assets/built/screen.css
 .gh-head-menu .nav a {
     display: inline-block;
     padding: 5px 0;
-    opacity: 0.8
+    opacity: 0.8;
 }
 
 .gh-head-menu .nav a:hover {
     opacity: 1;
 }
-
 
 /* Secondary Navigation
 /* ---------------------------------------------------------- */
@@ -318,7 +328,7 @@ production stylesheet in assets/built/screen.css
 }
 
 .gh-social a {
-    opacity: 0.8
+    opacity: 0.8;
 }
 
 .gh-social a + a {
@@ -352,7 +362,6 @@ a.gh-head-button {
     border-radius: 30px;
 }
 
-
 /* Mobile Menu Trigger
 /* ---------------------------------------------------------- */
 
@@ -383,11 +392,11 @@ a.gh-head-button {
     left: 0;
     bottom: 0;
     margin: auto;
-    content: '';
+    content: "";
     width: 100%;
     height: 1px;
     background: currentcolor;
-    transition: transform 300ms cubic-bezier(.2,.6,.3,1), width 300ms cubic-bezier(.2,.6,.3,1);
+    transition: transform 300ms cubic-bezier(0.2, 0.6, 0.3, 1), width 300ms cubic-bezier(0.2, 0.6, 0.3, 1);
     will-change: transform, width;
 }
 
@@ -399,11 +408,11 @@ a.gh-head-button {
     left: 0;
     bottom: 0;
     margin: auto;
-    content: '';
+    content: "";
     width: 100%;
     height: 1px;
     background: currentcolor;
-    transition: transform 250ms cubic-bezier(.2,.7,.3,1), width 250ms cubic-bezier(.2,.7,.3,1);
+    transition: transform 250ms cubic-bezier(0.2, 0.7, 0.3, 1), width 250ms cubic-bezier(0.2, 0.7, 0.3, 1);
     will-change: transform, width;
 }
 
@@ -424,7 +433,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 .gh-head-open .gh-burger-box::before {
     width: 0;
     transform: translatex(19px);
-    transition: transform 200ms cubic-bezier(.2,.7,.3,1), width 200ms cubic-bezier(.2,.7,.3,1);
+    transition: transform 200ms cubic-bezier(0.2, 0.7, 0.3, 1), width 200ms cubic-bezier(0.2, 0.7, 0.3, 1);
 }
 
 .gh-head-open .gh-burger-inner::before {
@@ -436,7 +445,6 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     width: 26px;
     transform: translatex(6px) rotate(-135deg);
 }
-
 
 /* Mobile Menu
 /* ---------------------------------------------------------- */
@@ -544,7 +552,14 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 }
 
 .home-template.gh-head-open .gh-head {
-    background: var(--ghost-accent-color);
+    /* background: var(--ghost-accent-color); */
+    background: #c7f0e7; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #c7f0e7, #b1e9d2); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #c7f0e7,
+        #b1e9d2
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .home-template .gh-head-logo {
@@ -554,17 +569,18 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     margin-left: -2.5vmin;
 }
 
-
 /* 6. Post Feed
 /* ---------------------------------------------------------- */
 
 .post-feed {
     /* position: relative; */
-    /* display: flex; */
-    /* flex-direction: column; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     /* grid-gap: 4vmin; */
     /* grid-template-columns: 1fr; */
-    padding: 8vmin 0;
+    padding: 8vmin 0 0;
+    flex-wrap: wrap;
 }
 
 /* @media (max-width: 1000px) {
@@ -584,20 +600,21 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     flex: 1 1 301px;
     display: flex;
     flex-direction: column;
+    flex: 0 1 auto;
     min-height: 220px;
     background-size: cover;
     padding: 20px;
     box-shadow: 5px 10px 18px #195819;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
 }
 
 .post-card.article {
     box-shadow: 5px 10px 18px #195819;
-    
 }
 
-.post-feed .post-card:not(:first-child) {
-    margin: 8vmin auto 0;
+.post-feed .post-card {
+    margin: 0 0 8vmin;
 }
 
 .post-card-image-link {
@@ -615,7 +632,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     object-fit: cover;
     display: block;
     /* max-width: 100%; */
-    height: auto;
+    /* height: auto; */
 }
 
 .post-card-content-link {
@@ -757,7 +774,6 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 }
 
 .post-feed .post-card-byline {
-
     justify-self: end;
 }
 
@@ -813,7 +829,7 @@ make sure this only happens on large viewports / desktop-ish devices.
         transition: max-height 2s;
 } */
 
-/* .post-card-large:hover {
+    /* .post-card-large:hover {
     opacity: 0.2;
     max-height:300px;
 } */
@@ -851,11 +867,14 @@ make sure this only happens on large viewports / desktop-ish devices.
         -webkit-line-clamp: 8;
     } */
 
+    /* .post-feed .post-card.no-image {
+        max-width: 48%;
+    } */
+
     .post-feed .post-card-byline-date {
         display: inline-block;
     }
 }
-
 
 @media (max-width: 500px) {
     .post-card-title {
@@ -867,20 +886,17 @@ make sure this only happens on large viewports / desktop-ish devices.
     }
 }
 
-
 /* 7. Single Post
 /* ---------------------------------------------------------- */
 
 .article {
     padding: 8vmin 0;
-    background: rgba(255,255,255,0.9);
-
+    background: rgba(255, 255, 255, 0.9);
 }
-
 
 .article-header {
     padding: 0 0 6vmin 0;
-    margin-top:40px;
+    /* margin-top: 40px; */
 }
 
 .article-tag {
@@ -930,12 +946,9 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 
 @media (min-width: 1001px) {
-
-
     .article-header {
-        margin-top:60px;
-}
-
+        margin-top: 60px;
+    }
 }
 
 /* -------- */
@@ -952,16 +965,15 @@ use it for applying any other styles. */
     grid-template-columns:
         [full-start]
         minmax(4vmin, auto)
-            [wide-start]
-            minmax(auto, 240px)
-                [main-start]
-                    min(720px, calc(100% - 8vw))
-                [main-end]
-            minmax(auto, 240px)
-            [wide-end]
+        [wide-start]
+        minmax(auto, 240px)
+        [main-start]
+        min(720px, calc(100% - 8vw))
+        [main-end]
+        minmax(auto, 240px)
+        [wide-end]
         minmax(4vmin, auto)
-        [full-end]
-    ;
+        [full-end];
 }
 
 .gh-canvas > * {
@@ -979,7 +991,6 @@ use it for applying any other styles. */
 .kg-width-full img {
     width: 100%;
 }
-
 
 /* Content
 /* ---------------------------------------------------------- */
@@ -1069,7 +1080,7 @@ is the very first element in the post content */
     font-weight: 400 !important;
     font-size: 0.9em;
     line-height: 1em;
-    color: #15171A;
+    color: #15171a;
     background: #f0f6f9;
     border-radius: 0.25em;
 }
@@ -1083,7 +1094,7 @@ is the very first element in the post content */
     line-height: 1.5em;
     background: var(--color-darkgrey);
     border-radius: 5px;
-    box-shadow: 0 2px 6px -2px rgba(0,0,0,.1), 0 0 1px rgba(0,0,0,.4);
+    box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 650px) {
@@ -1099,7 +1110,6 @@ is the very first element in the post content */
         left: -4vmin;
     }
 }
-
 
 /* Cards
 /* ---------------------------------------------------------- */
@@ -1133,20 +1143,18 @@ except for when immediately preceeded by a heading */
     margin: auto;
 }
 
-
 /* Captions */
 .kg-card figcaption {
     padding: 1.5rem 1.5rem 0;
     text-align: center;
-    color: rgba(0,0,0,0.5);
+    color: rgba(0, 0, 0, 0.5);
     font-weight: 600;
     font-size: 1.3rem;
     line-height: 1.4em;
 }
 .kg-card figcaption strong {
-    color: rgba(0,0,0,0.8);
+    color: rgba(0, 0, 0, 0.8);
 }
-
 
 /* Highly specific styles for traditional Instagram embeds */
 iframe.instagram-media {
@@ -1159,7 +1167,6 @@ iframe.instagram-media {
 iframe.instagram-media + script + :not([id]) {
     margin-top: 6vmin;
 }
-
 
 /* Galleries
 /* ---------------------------------------------------------- */
@@ -1203,7 +1210,6 @@ between them, so it looks like 1 big gallery */
     margin: 0 0 0 0.75em;
 }
 
-
 /* Bookmark Cards
 /* ---------------------------------------------------------- */
 
@@ -1223,7 +1229,7 @@ Ghost editor. */
     color: currentColor;
     font-family: var(--font-sans-serif);
     text-decoration: none !important;
-    background: rgba(255,255,255,0.6);
+    background: rgba(255, 255, 255, 0.6);
     border-radius: 5px;
     box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.4);
     overflow: hidden;
@@ -1243,7 +1249,7 @@ Ghost editor. */
     font-size: 1.5rem;
     line-height: 1.4em;
     font-weight: 600;
-    color: #15171A;
+    color: #15171a;
 }
 
 .kg-bookmark-description {
@@ -1316,7 +1322,6 @@ Ghost editor. */
     border-radius: 0 4px 4px 0;
 }
 
-
 /* Card captions
 /* ---------------------------------------------------------- */
 
@@ -1378,20 +1383,21 @@ Ghost editor. */
 
 .post-full-content table {
     -webkit-overflow-scrolling: touch;
-    background: radial-gradient(ellipse at left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 0 center, radial-gradient(ellipse at right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 100% center;
+    background: radial-gradient(ellipse at left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 0 center,
+        radial-gradient(ellipse at right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 100% center;
     background-attachment: scroll, scroll;
     background-size: 10px 100%, 10px 100%;
     background-repeat: no-repeat;
 }
 
 .post-full-content table td:first-child {
-    background-image: linear-gradient(to right, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
     background-size: 20px 100%;
     background-repeat: no-repeat;
 }
 
 .post-full-content table td:last-child {
-    background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
     background-position: 100% 0;
     background-size: 20px 100%;
     background-repeat: no-repeat;
@@ -1412,7 +1418,6 @@ Ghost editor. */
     padding: 6px 12px;
     border: color-mod(var(--color-wash) l(-1%) s(-5%)) 1px solid;
 }
-
 
 /* 7.1. Post Byline
 /* ---------------------------------------------------------- */
@@ -1482,7 +1487,6 @@ Ghost editor. */
     margin-bottom: 0;
 }
 
-
 /* 7.3. Subscribe
 /* ---------------------------------------------------------- */
 
@@ -1529,7 +1533,6 @@ Ghost editor. */
     border-radius: 5px;
 } */
 
-
 /* 7.4. Read more
 /* ---------------------------------------------------------- */
 
@@ -1560,10 +1563,10 @@ Ghost editor. */
     color: #fff;
 } */
 
-
 @media (max-width: 1000px) {
     .read-more {
         grid-template-columns: 1fr 1fr;
+        margin-bottom:60px;
     }
     .read-more article:nth-child(3) {
         display: none;
@@ -1577,8 +1580,8 @@ Ghost editor. */
     .read-more article:nth-child(2) {
         display: none;
     }
+   
 }
-
 
 /* 8. Author Template
 /* ---------------------------------------------------------- */
@@ -1605,7 +1608,7 @@ Ghost editor. */
     position: sticky;
     top: 4vmin;
     font-size: 1.4rem;
-    line-height:  1.4em;
+    line-height: 1.4em;
 }
 
 .author-profile-pic {
@@ -1671,7 +1674,6 @@ Ghost editor. */
     }
 }
 
-
 /* 8. Tag Template
 /* ---------------------------------------------------------- */
 
@@ -1683,7 +1685,6 @@ Ghost editor. */
 .tag-template .post-card-large .post-card-content {
     order: 1;
 }
-
 
 /* 9. Error Template
 /* ---------------------------------------------------------- */
@@ -1751,7 +1752,6 @@ Ghost editor. */
     }
 }
 
-
 /* 11. Site Footer
 /* ---------------------------------------------------------- */
 
@@ -1784,7 +1784,7 @@ Ghost editor. */
 }
 
 .site-footer a:hover {
-    color: rgba(255,255,255,1);
+    color: rgba(255, 255, 255, 1);
     text-decoration: none;
 }
 
@@ -1837,12 +1837,10 @@ Ghost editor. */
 }
 
 @media (min-width: 1001px) {
-.site-footer {
-    box-shadow: none;
+    .site-footer {
+        box-shadow: none;
+    }
 }
-
-}
-
 
 /* 12. Dark Mode
 /* ---------------------------------------------------------- */
@@ -1985,7 +1983,7 @@ html.dark-mode .post-full-content table td {
 html.dark-mode .post-full-content .kg-bookmark-container,
 html.dark-mode .post-full-content .kg-bookmark-container:hover {
     color: rgba(255, 255, 255, 0.75);
-    box-shadow: 0 0 1px rgba(255,255,255,0.9);
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.9);
 }
 
 html.dark-mode .post-full-content input {
@@ -2060,14 +2058,47 @@ the right place. Onward!
 
  */
 
- /* Sidebar */
+/* Sidebar */
 
- .eco-site-main {
+.eco-site-main {
     display: block;
-    margin-top:60px;
- }
+    /* margin-top: 60px; */
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px 0;
+    
+}
 
- .eco-sidebar {
+.eco-content-main {
+    display: block;
+    /* margin: 0 4vmin; */
+}
+
+.eco-content-header {
+    display: block;
+    /* width: 100%; */
+    /* margin: 4vmin; */
+    padding: 20px;
+    
+}
+
+.eco-content-header h1 {
+    width: 100%;
+    margin-bottom: 20px;
+    color: #195819;
+}
+
+.eco-sidebar-container {
+
+    padding: 8vmin 0 0;
+}
+
+/* nav.eco-environment a {
+    margin-right: 20px;
+    color:#195819;
+} */
+
+
+.eco-sidebar {
     position: relative;
     flex: 1 1 301px;
     display: flex;
@@ -2075,31 +2106,75 @@ the right place. Onward!
     min-height: 220px;
     background-size: cover;
     padding: 20px;
-    box-shadow: 5px 10px 18px #195819;
+    /* border-right: 1px solid #195819; */
+    height: 100%;
+    /* box-shadow: 5px 10px 18px #195819;
     background: rgba(255,255,255,0.9);
+    padding: 8vmin 0 0; */
+}
 
- }
+ .eco-sidebar h2 {
+    margin: 0 0 0.4em;
+    font-size: 2.4rem;
+    transition: color 0.2s ease-in-out;
+ } 
 
- .eco-sidebar h1 {
-     color: #195819;
-     font-size: 2rem;
-     line-height: 2.2rem;
-     font-weight: 500;
-     letter-spacing: 0.2px;
-     text-transform: uppercase;
- }
+.post-feed hr {
+    margin: 2em 0;
+}
 
- .post-feed.eco-environment {
-     padding: 0;
- }
+.post-feed.eco-environment .post-card {
+    margin: 0;
+}
 
- @media (min-width: 1001px){
-    .eco-site-main {
+.post-feed.eco-environment {
+    padding: 0;
+}
+
+/* @media (min-width:1001px){
+.post-feed.eco-environment .post-card {
+    max-width: 48%;
+}
+
+.post-feed.eco-environment .post-card:first-child {
+    max-width: 100%;
+}
+} */
+
+.post-feed.eco-environment .post-card {
+    background: none;
+    box-shadow: none;
+    /* border-bottom: 1px solid #195819; */
+}
+
+.post-feed.eco-environment .post-card-meta {
+    display: block;
+}
+
+@media (min-width: 1001px) {
+    .eco-content-main {
         display: grid;
         grid-gap: 2.5vmin;
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: 4fr 2fr;
         grid-auto-flow: column;
-        margin-top:60px;
-     }
- }
- /* Environmental Page */
+        margin: 0 4vmin;
+    }
+
+    .post-feed.eco-environment .post-card:last-child hr {
+        display: none;
+    }
+
+    .eco-site-main {
+
+        padding: 40px 4vmin;
+        
+    }
+    
+    .eco-content-header {
+  
+        margin: 4vmin;
+   
+        
+    }
+}
+/* Environmental Page */
