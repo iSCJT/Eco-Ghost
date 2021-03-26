@@ -209,7 +209,7 @@ production stylesheet in assets/built/screen.css
     line-height: 1.3em;
     z-index: 10;
     box-shadow: 0px 2px 5px #2e362e;
-    /* position: fixed; */
+    position: fixed;
     width: 100%;
     background: #c7f0e7; /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #c7f0e7, #b1e9d2); /* Chrome 10-25, Safari 5.1-6 */
@@ -539,13 +539,13 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     }
 }
 
-.home-template .gh-head {
-    position: absolute;
+/* .home-template .gh-head {
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
     z-index: 2000;
-}
+} */
 
 .home-template .gh-head.has-cover {
     background: transparent;
@@ -2150,6 +2150,12 @@ the right place. Onward!
 .post-feed.eco-environment .post-card-meta {
     display: block;
 }
+/* 
+@media (max-width:1000px) {
+    .eco-container {
+        margin-top: 60px;
+    }
+} */
 
 @media (min-width: 1001px) {
     .eco-content-main {
