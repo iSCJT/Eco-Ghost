@@ -1,0 +1,60 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+
+{{!-- The main content area --}}
+
+
+<main id="site-main" class="eco-site-main eco-environment inner">
+    <div class="eco-content-header">
+    <h1>The Environment&nbsp🌳</h1>
+    <div class="eco-environment-navigation">
+        {{!-- <nav class="eco-environment">
+            
+             <a href="">Blah Blah Blah</a>
+        </nav> --}}
+    </div>
+    <p class="eco-environment-description">
+            On this page I'll be sharing information and resources that I come across as well as documenting the steps I'm personally taking to try and make a positive impact.
+        </p>
+    
+</div>
+<div class="eco-content-main">
+   
+    <div class="posts">
+        
+
+        <div class="post-feed eco-environment">
+            
+            {{#foreach posts}}
+
+                    {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                   {{> "post-card-environment"}}
+
+            {{/foreach}}
+        </div>
+    </div>
+   
+    
+      <div class="eco-sidebar">
+        <header class="eco-header">
+       
+        </header>
+        <div class="eco-content">
+         {{!-- <h2>My View</h2>
+        <p>
+            I've had an interest in the environment and climate change for a long time.  On this page I'll be sharing information and resources that I come across as well as documenting the steps I'm personally taking to try and make a positive impact.
+        </p>
+        <br> --}}
+        <h2>Highlights</h2>
+        <a href="">Blog Zero - A carbon neutral blog</a>
+        <span>How </span>
+        </div>
+        <div class="eco-footer">
+
+        </div>
+
+    </div>
+    </div>
+</main>

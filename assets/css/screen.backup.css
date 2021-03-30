@@ -47,7 +47,7 @@ production stylesheet in assets/built/screen.css
 
     --ghost-accent-color: {value};
 
-    You can use this variable throughout your styles
+    You can use this variale throughout your styles
      */
 
     /* Fonts */
@@ -93,7 +93,20 @@ production stylesheet in assets/built/screen.css
 
 .site-header {
     position: relative;
+    /* color: #fff; */
+    /* background: var(--ghost-accent-color); */
 }
+
+/* .site-header-cover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
 
 .site-header-content {
     position: relative;
@@ -114,11 +127,15 @@ production stylesheet in assets/built/screen.css
     padding: 0;
 }
 
-.site-description a,span {
+.site-description a {
     font-weight: bold;
     transition: 500ms linear;
     
 }
+
+/* .site-description span:hover {
+    font-size: 105%;
+} */
 
 .site-logo {
     max-height: 55px;
@@ -138,41 +155,33 @@ production stylesheet in assets/built/screen.css
         font-size: 1.8rem;
     }
 }
-/* @media (max-width: 1000px) {
-    .site-description span.eco-environment {
+@media (max-width: 1000px) {
+    .site-description a.eco-environment {
         color: #118611;
     }
 
-    .site-description span.eco-mental-health {
+    .site-description a.eco-mental-health {
         color: #e231d3;
     }
 
-    .site-description span.eco-life{
-        color: #115ec4;
-    }
-
-    .site-description span.eco-heart {
+    .site-description a.eco-heart {
         color: #d12828;
     }
 }
 
 @media (min-width: 1001px) {
-    .site-description span.eco-environment:hover {
+    .site-description a.eco-environment:hover {
         color: #118611;
     }
 
-    .site-description span.eco-mental-health:hover {
+    .site-description a.eco-mental-health:hover {
         color: #e231d3;
     }
 
-    .site-description span.eco-life:hover{
-        color: #115ec4;
-    }
-
-    .site-description span.eco-heart:hover {
+    .site-description a.eco-heart:hover {
         color: #d12828;
     }
-} */
+}
 
 /* 4.1 Home header
 /* ---------------------------------------------------------- */
@@ -184,9 +193,11 @@ production stylesheet in assets/built/screen.css
 }
 
 .site-header-content {
-    padding: 10vmin 4vmin;
+    padding: 18vmin 4vmin 10vmin;
     font-size: 2.5rem;
     font-weight: 400;
+    /* color: #fff; */
+    /* background: var(--ghost-accent-color); */
 }
 
 /* 5. Site Navigation
@@ -196,7 +207,7 @@ production stylesheet in assets/built/screen.css
     padding: 1vmin 4vmin;
     font-size: 1.6rem;
     line-height: 1.3em;
-    z-index: 1000;
+    z-index: 10;
     box-shadow: 0px 2px 5px #2e362e;
     position: fixed;
     width: 100%;
@@ -207,10 +218,12 @@ production stylesheet in assets/built/screen.css
         #c7f0e7,
         #b1e9d2
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    /* color: #fff; */
+    /* background: var(--ghost-accent-color); */
 }
 
 .gh-head a {
+    /* color: inherit; */
     text-decoration: none;
 }
 
@@ -526,11 +539,20 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     }
 }
 
+/* .home-template .gh-head {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2000;
+} */
+
 .home-template .gh-head.has-cover {
     background: transparent;
 }
 
 .home-template.gh-head-open .gh-head {
+    /* background: var(--ghost-accent-color); */
     background: #c7f0e7; /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #c7f0e7, #b1e9d2); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(
@@ -551,12 +573,27 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 /* ---------------------------------------------------------- */
 
 .post-feed {
+    /* position: relative; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    /* grid-gap: 4vmin; */
+    /* grid-template-columns: 1fr; */
     padding: 8vmin 0 0;
     flex-wrap: wrap;
 }
+
+/* @media (max-width: 1000px) {
+    .post-feed {
+        grid-template-columns: 1fr 1fr;
+    }
+} */
+/* @media (max-width: 700px) {
+    .post-feed {
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+    }
+} */
 
 .post-card {
     position: relative;
@@ -590,10 +627,12 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 .post-card-image {
     position: relative;
     width: 100%;
+    /* max-height: 700px; */
     background: var(--color-lightgrey) no-repeat center center;
     object-fit: cover;
     display: block;
-
+    /* max-width: 100%; */
+    /* height: auto; */
 }
 
 .post-card-content-link {
@@ -619,12 +658,14 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 }
 
 .post-card-primary-tag {
+    /* margin: 0 0 0.2em; */
     color: var(--ghost-accent-color);
     font-size: 1.3rem;
     line-height: 1.5rem;
     font-weight: 500;
     letter-spacing: 0.2px;
     text-transform: uppercase;
+    /* margin-left:4px; */
 }
 
 .post-card-title {
@@ -666,10 +707,66 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     margin-bottom: 10px;
 }
 
-.author-list {
+/* .author-profile-image,
+.avatar-wrapper {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: color-mod(var(--color-lightgrey) l(+10%));
+    border-radius: 100%;
 
+    object-fit: cover;
+} */
+
+/* .post-card-meta .profile-image-wrapper,
+.post-card-meta .avatar-wrapper {
+    position: relative;
+} */
+
+.author-list {
+    /* display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 0 4px;
+    padding: 0; */
     list-style: none;
 }
+
+/* .author-list-item {
+    position: relative;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+}  */
+
+/* .static-avatar {
+    display: block;
+    overflow: hidden;
+    margin: 0 0 0 -6px;
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.2);
+} */
+
+/* .post-card-byline-content {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    color: color-mod(var(--color-midgrey) l(+10%));
+    font-size: 1.4rem;
+    line-height: 1.2em;
+    font-weight: 400;
+}
+
+.post-card-byline-content span {
+    margin: 0;
+}
+
+.post-card-byline-content a {
+    color: color-mod(var(--color-darkgrey) l(+15%));
+    font-weight: 600;
+} */
 
 .post-card-byline {
     font-size: 1.3rem;
@@ -690,6 +787,29 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     opacity: 0.6;
 }
 
+/* .single-author-byline {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    color: color-mod(var(--color-midgrey) l(-10%));
+    font-size: 1.3rem;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+
+.single-author {
+    display: flex;
+    align-items: center;
+}
+
+.single-author .static-avatar {
+    margin-left: -2px;
+}
+
+.single-author-name {
+    display: inline-block;
+} */
+
 /* Special Styling for home page grid (below):
 
 The first post in the list is styled to be bigger than the others and take over
@@ -699,6 +819,57 @@ make sure this only happens on large viewports / desktop-ish devices.
  */
 
 @media (min-width: 1001px) {
+    /* .post-card-large {
+        grid-column: 1 / span 3;
+        display: grid;
+        grid-gap: 4vmin;
+        grid-template-columns: 1fr 1fr 1fr;
+        min-height: 280px;
+        border-top: 0;
+        transition: max-height 2s;
+} */
+
+    /* .post-card-large:hover {
+    opacity: 0.2;
+    max-height:300px;
+} */
+
+    /* .post-card-large:not(.no-image) .post-card-header {
+        margin-top: 0;
+    }
+
+    .post-card-large .post-card-image-link {
+        position: relative;
+        grid-column: 1 / span 2;
+        margin-bottom: 0;
+        min-height: 380px;
+    } */
+
+    /* .post-card-large .post-card-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    } */
+
+    /* .post-card-large .post-card-content {
+        justify-content: center;
+    }
+
+    .post-card-large .post-card-title {
+        margin-top: 0;
+        font-size: 3.2rem;
+    }
+
+    .post-card-large .post-card-excerpt p {
+        margin-bottom: 1.5em;
+        font-size: 1.7rem;
+        line-height: 1.55em;
+        -webkit-line-clamp: 8;
+    } */
+
+    /* .post-feed .post-card.no-image {
+        max-width: 48%;
+    } */
 
     .post-feed .post-card-byline-date {
         display: inline-block;
@@ -725,7 +896,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 
 .article-header {
     padding: 0 0 6vmin 0;
-
+    /* margin-top: 40px; */
 }
 
 .article-tag {
@@ -1370,6 +1541,7 @@ Ghost editor. */
     padding: 4vmin;
     margin: 0 auto -40px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* background: color-mod(var(--color-darkgrey) l(-5%)); */
 }
 
 .read-more {
@@ -1379,8 +1551,17 @@ Ghost editor. */
 }
 
 .read-more .post-card-title {
+    /* color: #fff; */
     opacity: 0.8;
 }
+
+/* .read-more .post-card-excerpt {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.read-more .post-card-byline-content a {
+    color: #fff;
+} */
 
 @media (max-width: 1000px) {
     .read-more {
@@ -1576,26 +1757,31 @@ Ghost editor. */
 
 .site-footer {
     position: relative;
-
+    /* margin: 40px 0 0 0; */
     padding: 40px 4vmin 140px;
     box-shadow: 0px 2px 5px #2e362e;
     z-index: 10;
-
+    /* color: #fff; */
+    /* background: color-mod(var(--color-darkgrey) l(-5%)); */
 }
 
 .site-footer .inner {
     display: grid;
     grid-gap: 40px;
     grid-template-columns: auto 1fr auto;
+    /* color: rgba(255,255,255,0.7); */
     font-size: 1.3rem;
 }
 
 .site-footer .copyright a {
-
+    /* color: #fff; */
     letter-spacing: -0.015em;
     font-weight: 500;
 }
 
+.site-footer a {
+    /* color: rgba(255,255,255,0.7); */
+}
 
 .site-footer a:hover {
     color: rgba(255, 255, 255, 1);
@@ -1645,6 +1831,7 @@ Ghost editor. */
     }
     .site-footer .copyright,
     .site-footer .copyright a {
+        /* color: #fff; */
         font-size: 1.5rem;
     }
 }
@@ -1856,14 +2043,26 @@ html.dark-mode .subscribe-form .success .message-success {
     color: color-mod(var(--color-green) l(+5%) s(-5%));
 }
 
-/* BRAND NEW */
+/*
 
-main.eco-container {
-    margin-top:60px;
-}
+Hey! You reached the end.
+
+Hope you enjoyed this CSS file, if you have any suggestions
+for improvements that might be useful for everyone who uses
+this theme, you can find the open source repository for it
+here: https://github.com/tryghost/casper
+
+Or, if you've just scrolled all the way to the bottom of the
+file to add some of your own styles. Well, you've come to
+the right place. Onward!
+
+ */
+
+/* Sidebar */
 
 .eco-site-main {
     display: block;
+    /* margin-top: 60px; */
     background: rgba(255, 255, 255, 0.9);
     padding: 20px 0;
     
@@ -1871,10 +2070,13 @@ main.eco-container {
 
 .eco-content-main {
     display: block;
+    /* margin: 0 4vmin; */
 }
 
 .eco-content-header {
     display: block;
+    /* width: 100%; */
+    /* margin: 4vmin; */
     padding: 20px;
     
 }
@@ -1890,6 +2092,12 @@ main.eco-container {
     padding: 8vmin 0 0;
 }
 
+/* nav.eco-environment a {
+    margin-right: 20px;
+    color:#195819;
+} */
+
+
 .eco-sidebar {
     position: relative;
     flex: 1 1 301px;
@@ -1898,8 +2106,11 @@ main.eco-container {
     min-height: 220px;
     background-size: cover;
     padding: 20px;
+    /* border-right: 1px solid #195819; */
     height: 100%;
-
+    /* box-shadow: 5px 10px 18px #195819;
+    background: rgba(255,255,255,0.9);
+    padding: 8vmin 0 0; */
 }
 
  .eco-sidebar h2 {
@@ -1920,17 +2131,31 @@ main.eco-container {
     padding: 0;
 }
 
+/* @media (min-width:1001px){
+.post-feed.eco-environment .post-card {
+    max-width: 48%;
+}
+
+.post-feed.eco-environment .post-card:first-child {
+    max-width: 100%;
+}
+} */
 
 .post-feed.eco-environment .post-card {
     background: none;
     box-shadow: none;
-
+    /* border-bottom: 1px solid #195819; */
 }
 
 .post-feed.eco-environment .post-card-meta {
     display: block;
 }
-
+/* 
+@media (max-width:1000px) {
+    .eco-container {
+        margin-top: 60px;
+    }
+} */
 
 @media (min-width: 1001px) {
     .eco-content-main {
@@ -1958,4 +2183,4 @@ main.eco-container {
         
     }
 }
-
+/* Environmental Page */

@@ -49,7 +49,7 @@
                     {{#if @site.twitter}}
                         <a class="gh-social-twitter" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
                     {{/if}}
-                     <a class="gh-social-rss" href="" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
+                     <a class="gh-social-rss" href="{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
                      <a class="gh-social-email" href="mailto:hi@scjt.blog" title="Email" target="_blank" rel="noopener">{{> "icons/email"}}</a>
                 </div>
 
@@ -62,7 +62,7 @@
         </nav>
     </header>
 
-    <main>
+    <main class="eco-container">
         {{!-- All other templates get inserted here, index.hbs, post.hbs, etc --}}
         {{{body}}}
     </main>
