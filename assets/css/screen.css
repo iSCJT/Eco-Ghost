@@ -719,7 +719,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 /* ---------------------------------------------------------- */
 
 .article {
-    padding: 8vmin 0;
+    padding: 8vmin 0 20vmin;
     background: rgba(255, 255, 255, 0.9);
 }
 
@@ -1596,11 +1596,11 @@ Ghost editor. */
     font-weight: 500;
 }
 
-
+/* 
 .site-footer a:hover {
     color: rgba(255, 255, 255, 1);
     text-decoration: none;
-}
+} */
 
 .site-footer-nav ul {
     display: flex;
