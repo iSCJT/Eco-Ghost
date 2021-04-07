@@ -2,7 +2,7 @@
     "name": "eco-ghost",
     "description": "A work in progress 'eco' lightweight theme for Ghost, designed to minimise page load times and size. Originally based on the default Casper theme.",
     "demo": "https://scjt.blog",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "engines": {
         "ghost": ">=4.0.0",
         "ghost-api": "v4"

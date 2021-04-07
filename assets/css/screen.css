@@ -936,7 +936,7 @@ is the very first element in the post content */
     }
 
     .gh-content blockquote::before {
-        left: -4vmin;
+        left: -3.5vmin;
     }
 }
 
